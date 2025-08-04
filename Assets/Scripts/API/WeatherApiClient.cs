@@ -39,8 +39,8 @@ namespace WeatherApp.Services
                 return null;
             }
             
-            // TODO: Build the complete URL with city and API key
-            string url = $"";
+            
+            string url = $"{baseUrl}?q={city}&appid={ApiConfig.OpenWeatherMapApiKey}";
             
             // TODO: Create UnityWebRequest and use modern async pattern
             using (UnityWebRequest request = UnityWebRequest.Get(url))
