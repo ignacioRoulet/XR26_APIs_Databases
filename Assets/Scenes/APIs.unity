@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e3b9330a9975b47b2514a57b37bf53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseUrl: http://api.openweathermap.org/data/2.5/weather
+  baseUrl: https://api.openweathermap.org/data/2.5/weather
 --- !u!4 &275111158
 Transform:
   m_ObjectHideFlags: 0

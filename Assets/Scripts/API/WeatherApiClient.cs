@@ -15,7 +15,7 @@ namespace WeatherApp.Services
     public class WeatherApiClient : MonoBehaviour
     {
         [Header("API Configuration")]
-        [SerializeField] private string baseUrl = "http://api.openweathermap.org/data/2.5/weather";
+        [SerializeField] private string baseUrl = "https://api.openweathermap.org/data/2.5/weather";
         
         /// <summary>
         /// Fetch weather data for a specific city using async/await pattern
@@ -59,8 +59,7 @@ namespace WeatherApp.Services
                         Debug.LogError($"Request failed: {request.error}");
                         break;
                 }
-                
-                return null; 
+                return null; // Placeholder - students will replace this
             }
         }
 
