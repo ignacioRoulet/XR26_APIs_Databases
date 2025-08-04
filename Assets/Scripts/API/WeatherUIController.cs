@@ -23,16 +23,19 @@ namespace WeatherApp.UI
         
         private void Start()
         {
+            Debug.Log("WeatherUIController started");
             // Set up button click listener
             getWeatherButton.onClick.AddListener(OnGetWeatherClicked);
 
             // Initialize UI state
             SetStatusText("Enter a city name and click Get Weather");
+
         }
         
         /// TODO: Students will implement this method
         private async void OnGetWeatherClicked()
         {
+            Debug.Log("Get Weather button clicked");
             // Get city name from input field
             string cityName = cityInputField.text;
             
