@@ -62,6 +62,11 @@ namespace WeatherApp.Services
                 return null; // Placeholder - students will replace this
             }
         }
+
+        WeatherData ParseWeatherData(string jsonString)
+        {
+            return JsonConvert.DeserializeObject<WeatherData>(jsonString);
+        }
         
         /// <summary>
         /// Example usage method - students can use this as reference

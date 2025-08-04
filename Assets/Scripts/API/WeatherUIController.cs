@@ -84,8 +84,11 @@ namespace WeatherApp.UI
             // TODO: Add more weather details
             if (weatherData.Main != null)
             {
-                displayText += "";
-                displayText += "";
+                displayText += $"The temperature is {weatherData.Main.Temperature} kelvin\n";
+                displayText += $"It feels like the weather is {weatherData.Main.FeelsLike} kelvin\n";
+                displayText += $"Humidity is {weatherData.Main.Humidity} percent\n";
+                displayText += $"Presure is {weatherData.Main.Pressure} hPa";
+
             }
             
             weatherDisplayText.text = displayText;
