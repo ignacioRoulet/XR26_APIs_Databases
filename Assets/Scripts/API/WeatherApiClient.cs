@@ -48,12 +48,17 @@ namespace WeatherApp.Services
                 
                 await request.SendWebRequest();
                 // TODO: Implement proper error handling for different result types
+                switch (request.result)
+                {
+                    case UnityWebRequest.Result.Success:
+                        return ParseWeatherData(request.downloadHandler.text);
+                }
                 // Check request.result for Success, ConnectionError, ProtocolError, DataProcessingError
-                
+
                 // TODO: Parse JSON response using Newtonsoft.Json
-                
+
                 // TODO: Return the parsed WeatherData object
-                
+
                 return null; // Placeholder - students will replace this
             }
         }
