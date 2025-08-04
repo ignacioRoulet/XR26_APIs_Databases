@@ -45,8 +45,8 @@ namespace WeatherApp.Services
             // TODO: Create UnityWebRequest and use modern async pattern
             using (UnityWebRequest request = UnityWebRequest.Get(url))
             {
-                // TODO: Use async/await, send the request and wait for response
                 
+                await request.SendWebRequest();
                 // TODO: Implement proper error handling for different result types
                 // Check request.result for Success, ConnectionError, ProtocolError, DataProcessingError
                 
