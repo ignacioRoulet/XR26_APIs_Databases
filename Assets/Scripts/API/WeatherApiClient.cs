@@ -52,14 +52,15 @@ namespace WeatherApp.Services
                 {
                     case UnityWebRequest.Result.Success:
                         return ParseWeatherData(request.downloadHandler.text);
+
+                    case UnityWebRequest.Result.ConnectionError:
+                    case UnityWebRequest.Result.ProtocolError:
+                    case UnityWebRequest.Result.DataProcessingError:
+                        Debug.LogError($"Request failed: {request.error}");
+                        break;
                 }
-                // Check request.result for Success, ConnectionError, ProtocolError, DataProcessingError
-
-                // TODO: Parse JSON response using Newtonsoft.Json
-
-                // TODO: Return the parsed WeatherData object
-
-               // return null; // Placeholder - students will replace this
+                
+                return null; 
             }
         }
 
